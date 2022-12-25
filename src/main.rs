@@ -1,9 +1,17 @@
+use std::io;
+
 fn main() {
-    println!("Please Choose Temperatur Convert");
-    println!("Select 1 To Convert Fahrenheit To Celsius");
-    println!("Select 2 To Convert Celsius to Fahrenheit");
-    println!("Select 3 To Exit");
-    
+    println!("Please Input Temperature Convert Option And Press Enter.");
+    println!("Input 1 To Convert Fahrenheit To Celsius");
+    println!("Input 2 To Convert Celsius to Fahrenheit");
+    println!("Input 3 To Exit");
+
+    let mut option = String::new();
+
+    io::stdin()
+    .read_line(&mut option)
+    .expect("Failed To Read Line");
+
 }
 
 fn c_to_f(c:i32)->i32{
