@@ -5,6 +5,7 @@ fn main() {
     println!("Input 1 To Convert Fahrenheit To Celsius");
     println!("Input 2 To Convert Celsius to Fahrenheit");
     println!("Input 3 To Exit");
+    loop{
 
     let mut option = String::new();
 
@@ -12,6 +13,16 @@ fn main() {
     .read_line(&mut option)
     .expect("Failed To Read Line");
 
+    let option: u32 = option.trim().parse().expect("Please type a number...");
+    if option == 1 {
+        println!("Please input Temprature in Fahrenheit:");
+
+    }else if option == 2 {
+        println!("Please input Temprature in Celsius:");
+    }else if  option ==3 {
+        break;
+    }
+    }
 }
 
 fn c_to_f(c:i32)->i32{
