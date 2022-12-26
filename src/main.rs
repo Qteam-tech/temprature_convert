@@ -29,8 +29,9 @@ fn c_to_f(){
         io::stdin()
         .read_line(&mut temp)
         .expect("Please Input a Number.");
-        let temp:u32=temp.trim().parse().expect("Please Input a number");
+        let temp:i32=temp.trim().parse().expect("Please Input a number");
     println!("Temp in Fahrenheit is : {}",(temp*9/5)+32);
+    println!("");
     main();
 }
 
@@ -39,7 +40,8 @@ fn f_to_c(){
         io::stdin()
         .read_line(&mut temp)
         .expect("Please Input a Number.");
-        let temp:u32=temp.trim().parse().expect("Please Input a number");
+        let temp:i32=temp.trim().parse().expect("Please Input a number");
     println!("Temp in Celsius is: {}",(temp-32)*5/9);
+    println!("");
     main();
 }
